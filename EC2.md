@@ -108,14 +108,29 @@ These instances are ideal for applications that use these resources in equal pro
 Compute Optimized instances are ideal for compute bound applications that benefit from high performance processors. Instances belonging to this category are well suited for batch processing workloads, media transcoding, 
 high performance web servers, high performance computing (HPC), scientific modeling, dedicated gaming servers and ad server engines, machine learning inference and other compute intensive applications.
 
++ AWS BUDGET
++ EC2 with User Data for a website
++ Security Groups
++ ASG
++ LOADBALANCER
++ SSH
++ Public and Private IP (ELASTIC IP)
+
+
+
+
 _**ASSIGNMENT:**_
 
  # EC2 PROJECTS
  https://github.com/HILL-TOPCONSULTANCY/ApplicationLB-App
- 1. APPLICATION DEPLOYMENT
+ 1. APPLICATION DEPLOYMENT with user data
  2. APPLICATION LOAD BALANCER
- 3. AUTO-SCCALING GROUP
-    
+ 3. AUTO-SCALING GROUP & POLICY- target tracking policy
+```sh
+sudo amazon-linux-extras install epel -y
+sudo yum install stress -y
+stress -c 4
+```
     ---
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/install-LAMP.html?refid=4b76a70e-625f-48c4-b90e-cc5a1eadff15
 3. Install an Apache web server with PHP and MySQL support on your Amazon Linux instance

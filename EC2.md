@@ -1,9 +1,9 @@
 # What is Amazon EC2?
 
-✔ Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud.
-✔ Access reliable, scalable infrastructure on demand. Scale capacity within minutes with SLA commitment of 99.99% availability.
-✔ Provide secure compute for your applications. Security is built into the foundation of Amazon EC2 with the AWS Nitro System.
-✔ Optimize performance and cost with flexible options like AWS Graviton-based instances, Amazon EC2 Spot instances, and AWS Savings Plans.
++ ✔ Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud.
++ ✔ Access reliable, scalable infrastructure on demand. Scale capacity within minutes with SLA commitment of 99.99% availability.
++ ✔ Provide secure compute for your applications. Security is built into the foundation of Amazon EC2 with the AWS Nitro System.
++ ✔ Optimize performance and cost with flexible options like AWS Graviton-based instances, Amazon EC2 Spot instances, and AWS Savings Plans.
 
 ## Use cases
 1. Run Cloud-Native and Enterprise Applications

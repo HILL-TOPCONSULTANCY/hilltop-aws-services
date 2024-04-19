@@ -47,56 +47,56 @@ AWS Free Tier also includes 750 hours of of public IPv4 addresses free per month
 
 ## Purchase models
 **On-Demand**
-On-Demand Instances let you pay for compute capacity by the hour or second with no long-term commitments. This frees you from the costs and complexities of planning, purchasing, and maintaining hardware and transforms what are commonly large fixed costs into much smaller variable costs.
+* On-Demand Instances let you pay for compute capacity by the hour or second with no long-term commitments. This frees you from the costs and complexities of planning, purchasing, and maintaining hardware and transforms what are commonly large fixed costs into much smaller variable costs.
 
-+ On-Demand Instances are recommended for:
-Users that prefer the low cost and flexibility of EC2 without any upfront payment or long-term commitment
-Applications with short-term, spiky, or unpredictable workloads that cannot be interrupted
-Applications being developed or tested on EC2 for the first time
+**+ On-Demand Instances are recommended for:**
++ Users that prefer the low cost and flexibility of EC2 without any upfront payment or long-term commitment
++ Applications with short-term, spiky, or unpredictable workloads that cannot be interrupted
++ Applications being developed or tested on EC2 for the first time
 
 **Savings Plans**
 Savings Plans is a flexible pricing model that can help you reduce your bill by up to 72% compared to On-Demand prices, in exchange for a commitment to a consistent amount of usage (measured in $/hour) for a 1- or 3-year term.
 
 AWS offers three types of Savings Plans: Compute Savings Plans, EC2 Instance Savings Plans, and Amazon SageMaker Savings Plans. Compute Savings Plans apply to usage across Amazon EC2, AWS Lambda, and AWS Fargate.
 
-+ Savings Plans are recommended for:
-Committed and steady-state usage
-Users looking to take advantage of the latest compute offerings while continuing to save money
+**+ Savings Plans are recommended for:**
++ Committed and steady-state usage
++ Users looking to take advantage of the latest compute offerings while continuing to save money
 
 **Amazon EC2 Spot Instances**
 Amazon EC2 Spot Instances let you take advantage of unused EC2 capacity in the AWS cloud and are available at a discount of up to 90% compared to On-Demand prices.
 
-+ Spot Instances are recommended for:
-Fault tolerant or stateless workloads
-Applications that can run on heterogeneous hardware
-Applications that have flexible start and end times
+**+ Spot Instances are recommended for:**
++ Fault tolerant or stateless workloads
++ Applications that can run on heterogeneous hardware
++ Applications that have flexible start and end times
 
 ## Reserved or dedicated capacity
 **On-Demand Capacity Reservations**
 On-Demand Capacity Reservations enable you to reserve compute capacity for your EC2 instances in a specific Availability Zone for any duration. Capacity reservations mitigate against the risk of being unable to get 
 On-Demand capacity in case of capacity constraints and ensure that you always have access to EC2 capacity when you need it, for as long as you need it.
 
-+ On-Demand Capacity Reservations are recommended for:
-Business-critical events or workloads that require capacity assurance
-Workloads that need to meet regulatory requirements for high availability
-Disaster recovery
+**+ On-Demand Capacity Reservations are recommended for:**
++ Business-critical events or workloads that require capacity assurance
++ Workloads that need to meet regulatory requirements for high availability
++ Disaster recovery
 
 **Amazon EC2 Capacity Blocks for ML**
 With Amazon EC2 Capacity Blocks for ML, you can easily reserve GPU instances for a future date to run your machine learning (ML) workloads. You pay only for the amount of compute time that you need, with no long-term commitment.
 
-+ EC2 Capacity Blocks are recommended for:
-Training and fine-tuning ML models
-Running experiments and building prototypes
-Planning for future surges in demand for ML applications
+**+ EC2 Capacity Blocks are recommended for:**
++ Training and fine-tuning ML models
++ Running experiments and building prototypes
++ Planning for future surges in demand for ML applications
 
 **Dedicated Hosts**
 A Dedicated Host is a physical EC2 server fully dedicated for your use. Dedicated Hosts can help you reduce costs by allowing you to use your existing server-bound software licenses, including Windows Server, SQL Server, a
 nd SUSE Linux Enterprise Server (subject to your license terms). Dedicated Hosts can be purchased On-Demand (hourly) or can be purchased as part of Savings Plans.
 
-+ Dedicated Hosts are recommended for:
-Users looking to save money on licensing costs
-Workloads that need to run on dedicated physical servers
-Users looking to offload host maintenance onto AWS, while controlling their maintenance event schedules to suit their business’s operational needs
+**+ Dedicated Hosts are recommended for:**
++ Users looking to save money on licensing costs
++ Workloads that need to run on dedicated physical servers
++ Users looking to offload host maintenance onto AWS, while controlling their maintenance event schedules to suit their business’s operational needs
 
 ## Instance Types:
 
@@ -109,5 +109,5 @@ Compute Optimized instances are ideal for compute bound applications that benefi
 high performance web servers, high performance computing (HPC), scientific modeling, dedicated gaming servers and ad server engines, machine learning inference and other compute intensive applications.
 
 _**ASSIGNMENT:**_
-Complete the task 
+* Complete the task 
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/install-LAMP.html?refid=4b76a70e-625f-48c4-b90e-cc5a1eadff15

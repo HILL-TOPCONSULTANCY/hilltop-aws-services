@@ -131,6 +131,6 @@ sudo amazon-linux-extras install epel -y
 sudo yum install stress -y
 stress -c 4
 ```
-    ---
+  
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/install-LAMP.html?refid=4b76a70e-625f-48c4-b90e-cc5a1eadff15
 3. Install an Apache web server with PHP and MySQL support on your Amazon Linux instance

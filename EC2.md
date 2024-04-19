@@ -109,5 +109,13 @@ Compute Optimized instances are ideal for compute bound applications that benefi
 high performance web servers, high performance computing (HPC), scientific modeling, dedicated gaming servers and ad server engines, machine learning inference and other compute intensive applications.
 
 _**ASSIGNMENT:**_
-* Complete the task 
+
+ # EC2 PROJECTS
+ https://github.com/HILL-TOPCONSULTANCY/ApplicationLB-App
+ 1. APPLICATION DEPLOYMENT
+ 2. APPLICATION LOAD BALANCER
+ 3. AUTO-SCCALING GROUP
+    
+    ---
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/install-LAMP.html?refid=4b76a70e-625f-48c4-b90e-cc5a1eadff15
+3. Install an Apache web server with PHP and MySQL support on your Amazon Linux instance

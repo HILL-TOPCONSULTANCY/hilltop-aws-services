@@ -121,7 +121,34 @@ stress -c 4
 + SSH
 + Public and Private IP (ELASTIC IP)
 
-_**ASSIGNMENT:**_
+#**AWS AUTO-SCALING GROUP**
+- In real rile, the load of your website and application can change
+- In the cloud, it is possible to create anf get rid of servers so easily.
+  **The Goal of ASG**
+  - Scale outy to match increading load
+  - Scale in to match decreasing load
+  - Ensure you have the desired number of instances running max and min
+  - Automaticallyb register new instances to LB
+  - Health checks and destroy unhealthy and create new ones
+ 
+- CREATING ASG
+  Name]
+  Launch Template
+  AMI
+  Instance Type, key pair, SG   Userdata VPC and Subnets, group size
+  Change desired to see scaling
+Scale based on CPU, Request Count Per Target, Average Network
+
+**Saling Policy**
+-Predictive Scaling
+- Machine Learning Driven (Dynamic)
+
+```sh
+sudo amazon-linux-extras install epel -y
+sudo yum install stress -y
+```
+  
+  **ASSIGNMENT:**_
 
  # EC2 PROJECTS
  https://github.com/HILL-TOPCONSULTANCY/ApplicationLB-App

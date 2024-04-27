@@ -112,16 +112,12 @@ high performance web servers, high performance computing (HPC), scientific model
 + EC2 with User Data for a website
 + Security Groups
 + AUTO-SCALING GROUP & POLICY- target tracking policy
- ```sh
-sudo amazon-linux-extras install epel -y
-sudo yum install stress -y
-stress -c 4
-```
+
 + LOAD BALANCER
 + SSH
 + Public and Private IP (ELASTIC IP)
 
-#**AWS AUTO-SCALING GROUP**
+# AWS AUTO-SCALING GROUP
 - In real rile, the load of your website and application can change
 - In the cloud, it is possible to create anf get rid of servers so easily.
   **The Goal of ASG**
@@ -132,7 +128,7 @@ stress -c 4
   - Health checks and destroy unhealthy and create new ones
  
 - CREATING ASG
-  Name]
+  Name
   Launch Template
   AMI
   Instance Type, key pair, SG   Userdata VPC and Subnets, group size
@@ -143,9 +139,10 @@ Scale based on CPU, Request Count Per Target, Average Network
 -Predictive Scaling
 - Machine Learning Driven (Dynamic)
 
-```sh
+ ```sh
 sudo amazon-linux-extras install epel -y
 sudo yum install stress -y
+stress -c 4
 ```
   
   **ASSIGNMENT:**_

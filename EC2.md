@@ -128,6 +128,7 @@ high performance web servers, high performance computing (HPC), scientific model
   - Health checks and destroy unhealthy and create new ones
  
 - CREATING ASG
+- Therre is horizontal and vertical scaling
   Name
   Launch Template
   AMI

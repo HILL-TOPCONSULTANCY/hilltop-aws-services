@@ -202,9 +202,9 @@ stress -c 4
   **ASSIGNMENT:**_
 
  # EC2 PROJECTS
- https://github.com/HILL-TOPCONSULTANCY/ApplicationLB-App
+'[PROJECT REPO](https://github.com/HILL-TOPCONSULTANCY/ApplicationLB-App)
  1. APPLICATION DEPLOYMENT with user data
  2. APPLICATION LOAD BALANCER
 ---
-https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/install-LAMP.html?refid=4b76a70e-625f-48c4-b90e-cc5a1eadff15
+[LAMP PROJECT](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/install-LAMP.html?refid=4b76a70e-625f-48c4-b90e-cc5a1eadff15)
 4. Install an Apache web server with PHP and MySQL support on your Amazon Linux instance

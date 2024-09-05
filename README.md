@@ -5,7 +5,7 @@ Amazon Web Services (AWS) is a comprehensive cloud computing platform provided b
 
 AWS is trusted by millions of customers globally, from small startups to large enterprises, due to its scalability, security, and global presence.
 
-## AWS Infrastructure Overview
+## AWS Global Infrastructure
 
 AWS infrastructure is designed to deliver scalable, secure, and high-performance cloud services. Here’s a summary of the key components of the AWS infrastructure:
 

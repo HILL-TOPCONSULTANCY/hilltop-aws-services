@@ -1,3 +1,56 @@
+Here are the steps to create a Free Tier AWS account:
+
+### Step 1: Go to the AWS Website
+1. Open your web browser and go to the [AWS Free Tier](https://aws.amazon.com/free) page.
+2. Click the **"Create a Free Account"** button.
+
+### Step 2: Sign Up for AWS
+1. **Enter your email address**: You will need a valid email address that will be associated with your AWS account.
+2. **Create a password**: Choose a strong password.
+3. **Account name**: Enter a unique name for your AWS account (e.g., your personal name or business name).
+4. Click on **"Continue"**.
+
+### Step 3: Contact Information
+1. **Select account type**: Choose between a **Personal** or **Professional** account. For most users, select **Personal**.
+2. **Fill in your personal information**: Enter your full name, phone number, and country/region.
+3. **Address details**: Fill in your address.
+4. **Agree to the AWS Customer Agreement** and click **"Create Account and Continue"**.
+
+### Step 4: Payment Information
+1. **Add your payment details**: You need to provide a valid credit or debit card, even for the Free Tier account. AWS uses this information to verify your identity and ensure compliance with the free usage limits.
+2. AWS will place a small authorization charge (typically $1) on your card for verification purposes, which will be refunded.
+3. Once you've added your payment details, click **"Verify and Add"**.
+
+### Step 5: Identity Verification
+1. **Phone verification**: AWS will require you to verify your identity via phone. Choose either a **text message (SMS)** or **voice call**.
+2. Enter your phone number and click **"Send SMS"** or **"Call me now"**.
+3. You will receive a PIN code. Enter the code to complete the verification.
+
+### Step 6: Select a Support Plan
+1. AWS offers several support plans, including **Basic (Free)**, **Developer**, **Business**, and **Enterprise**. For the Free Tier, select **Basic Support – Free**.
+2. Click **"Continue"**.
+
+### Step 7: Confirmation
+1. You will see a confirmation message saying your account is being created.
+2. Shortly after, you will receive a confirmation email from AWS. Follow any instructions in the email to finalize your account setup.
+
+### Step 8: Sign In to Your AWS Account
+1. After your account is confirmed, you can sign in to the AWS Management Console using the email and password you provided during registration.
+2. Go to [AWS Console Login](https://aws.amazon.com/console/) and enter your credentials.
+
+### Step 9: Access the Free Tier Services
+1. Once logged in, you can explore the AWS Free Tier services. AWS offers 12 months of free usage for several popular services like **Amazon EC2**, **Amazon S3**, and **Amazon RDS**, among others.
+2. Use the **Free Tier Dashboard** in the AWS Console to track your Free Tier usage and ensure you stay within the free usage limits.
+
+---
+
+### Important Notes:
+- **Credit Card Requirement**: Although AWS Free Tier is free for many services, you are required to provide credit card details to prevent misuse and for any usage beyond the Free Tier limits.
+- **Monitoring Usage**: Make sure to monitor your usage, as exceeding the Free Tier limits can lead to charges.
+- **Free Tier Limits**: The AWS Free Tier provides 12 months of free usage for new customers and includes 750 hours per month of Amazon EC2 usage, 5 GB of Amazon S3 storage, and other resources.
+
+By following these steps, you will have successfully created an AWS Free Tier account and can start exploring AWS services at no cost within the limits provided.
+---
 # What is Amazon EC2?
 
 + ✔ Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud.

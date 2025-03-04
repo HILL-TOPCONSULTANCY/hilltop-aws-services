@@ -199,45 +199,6 @@ The **NAT Gateway** allows private subnets to access the internet **without expo
 
 ---
 
-## **3️⃣ How to Create a Custom VPC in AWS**  
-### **Step 1: Log in to AWS and Navigate to VPC**  
-1. Sign in to the **AWS Management Console**.  
-2. Go to **VPC Dashboard** → Click **Create VPC**.  
-
-### **Step 2: Define Your VPC**  
-1. **VPC Name**: `MyCustomVPC`  
-2. **IPv4 CIDR Block**: `10.0.0.0/16`  
-3. **Enable DNS Support**: ✅  
-4. Click **Create VPC**.  
-
-### **Step 3: Create Subnets**  
-1. Go to **Subnets** → Click **Create Subnet**.  
-2. Select **MyCustomVPC** and create the following subnets:  
-   - **Public Subnet** → `10.0.1.0/24`  
-   - **Private Subnet** → `10.0.2.0/24`  
-   - **Database Subnet** → `10.0.3.0/24`  
-3. Click **Create**.  
-
-### **Step 4: Create an Internet Gateway (IGW)**  
-1. Go to **Internet Gateways** → Click **Create IGW**.  
-2. Name it `MyCustomIGW` → Attach it to `MyCustomVPC`.  
-
-### **Step 5: Configure Route Tables**  
-1. Go to **Route Tables** → Click **Create Route Table**.  
-2. Create two route tables:  
-   - **Public Route Table** (Associates with the Public Subnet)  
-   - **Private Route Table** (Associates with the Private & Database Subnets)  
-3. Add a **route for the Public Route Table**:  
-   - **Destination**: `0.0.0.0/0` → **Target**: Internet Gateway  
-
-### **Step 6: Create a NAT Gateway (Optional - For Private Subnet Internet Access)**  
-1. Go to **NAT Gateways** → Click **Create NAT Gateway**.  
-2. Attach it to **Public Subnet** and **Elastic IP**.  
-3. Update the **Private Route Table**:  
-   - **Destination**: `0.0.0.0/0` → **Target**: NAT Gateway  
-
----
-
 ## **4️⃣ Best Practices for AWS VPC Security**  
 ✅ **Use least privilege access in Security Groups**  
 ✅ **Block SSH/RDP access from the public internet**  

@@ -128,15 +128,6 @@ Let’s say you need **four subnets** from `192.168.1.0/24`.
 
 ---
 
-## **6️⃣ Summary**
-✅ **IP addresses are divided into five classes (A-E)**  
-✅ **CIDR notation is a more flexible way to manage IP addresses**  
-✅ **Subnet masks define how many hosts can exist in a network**  
-✅ **Subnetting divides networks into smaller segments for better management**  
-
-🚀 Would you like a **CIDR subnet calculator script in Python** to automate calculations?
----
-
 ## **3️⃣ How to Create a Custom VPC in AWS**  
 ### **Step 1: Log in to AWS and Navigate to VPC**  
 1. Sign in to the **AWS Management Console**.  

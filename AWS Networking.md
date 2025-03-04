@@ -130,43 +130,114 @@ Let’s say you need **four subnets** from `192.168.1.0/24`.
   - `192.168.1.192/26` → Hosts: `192.168.1.193 - 192.168.1.254`
 
 ---
+### **Steps to Create a VPC with Public and Private Subnets and Attach EC2 Instances**
 
-## **3️⃣ How to Create a Custom VPC in AWS**  
-### **Step 1: Log in to AWS and Navigate to VPC**  
-1. Sign in to the **AWS Management Console**.  
-2. Go to **VPC Dashboard** → Click **Create VPC**.  
+---
 
-### **Step 2: Define Your VPC**  
-1. **VPC Name**: `MyCustomVPC`  
-2. **IPv4 CIDR Block**: `10.0.0.0/16`  
-3. **Enable DNS Support**: ✅  
-4. Click **Create VPC**.  
+## **1️⃣ Create the VPC**
+1. **Open AWS Console** → Go to **VPC**.
+2. Click **Create VPC**.
+3. **Enter VPC Name:** e.g., `MyVPC`
+4. **IPv4 CIDR Block:** `10.0.0.0/20` (supports ~4,000 IPs).
+5. **Tenancy:** Default.
+6. Click **Create VPC**.
 
-### **Step 3: Create Subnets**  
-1. Go to **Subnets** → Click **Create Subnet**.  
-2. Select **MyCustomVPC** and create the following subnets:  
-   - **Public Subnet** → `10.0.1.0/24`  
-   - **Private Subnet** → `10.0.2.0/24`  
-   - **Database Subnet** → `10.0.3.0/24`  
-3. Click **Create**.  
+---
 
-### **Step 4: Create an Internet Gateway (IGW)**  
-1. Go to **Internet Gateways** → Click **Create IGW**.  
-2. Name it `MyCustomIGW` → Attach it to `MyCustomVPC`.  
+## **2️⃣ Create Two Public and Two Private Subnets**
+1. **Go to VPC** → Click **Subnets** → **Create Subnet**.
+2. Select **MyVPC**.
+3. **Create Public Subnets:**
+   - **Public Subnet 1:** `10.0.0.0/22` (AZ: `us-east-1a`)
+   - **Public Subnet 2:** `10.0.4.0/22` (AZ: `us-east-1b`)
+4. **Create Private Subnets:**
+   - **Private Subnet 1:** `10.0.8.0/22` (AZ: `us-east-1a`)
+   - **Private Subnet 2:** `10.0.12.0/22` (AZ: `us-east-1b`)
+5. Enable **Auto-Assign Public IP** for **public subnets only**.
+6. Click **Create Subnets**.
 
-### **Step 5: Configure Route Tables**  
-1. Go to **Route Tables** → Click **Create Route Table**.  
-2. Create two route tables:  
-   - **Public Route Table** (Associates with the Public Subnet)  
-   - **Private Route Table** (Associates with the Private & Database Subnets)  
-3. Add a **route for the Public Route Table**:  
-   - **Destination**: `0.0.0.0/0` → **Target**: Internet Gateway  
+---
 
-### **Step 6: Create a NAT Gateway (Optional - For Private Subnet Internet Access)**  
-1. Go to **NAT Gateways** → Click **Create NAT Gateway**.  
-2. Attach it to **Public Subnet** and **Elastic IP**.  
-3. Update the **Private Route Table**:  
-   - **Destination**: `0.0.0.0/0` → **Target**: NAT Gateway  
+## **3️⃣ Create and Attach an Internet Gateway (IGW) for Public Subnets**
+1. **Go to VPC** → **Internet Gateways** → Click **Create Internet Gateway**.
+2. Enter a **name** (e.g., `MyIGW`).
+3. Click **Attach to VPC** → Select **MyVPC** → Attach.
+
+---
+
+## **4️⃣ Create Route Tables for Public and Private Subnets**
+1. **Go to VPC** → **Route Tables**.
+2. **Create a Route Table for Public Subnets**:
+   - Click **Create Route Table** → Name: `Public-RT`
+   - **Attach to MyVPC**
+   - Click **Create**.
+   - Click the new **Route Table**, go to **Routes**, and **Edit Routes**:
+     - **Destination:** `0.0.0.0/0`
+     - **Target:** Select **Internet Gateway (MyIGW)**
+   - Click **Save changes**.
+   - Go to **Subnet Associations** → Select **Public Subnet 1 & 2** → Save.
+
+3. **Create a Route Table for Private Subnets**:
+   - Click **Create Route Table** → Name: `Private-RT`
+   - **Attach to MyVPC**
+   - Click **Create**.
+   - Go to **Subnet Associations** → Select **Private Subnet 1 & 2** → Save.
+
+---
+
+## **5️⃣ Create and Attach a NAT Gateway for Private Subnets**
+1. **Go to VPC** → **NAT Gateways** → **Create NAT Gateway**.
+2. Select **Public Subnet 1**.
+3. Allocate a **new Elastic IP**.
+4. Click **Create**.
+5. Go back to **Private Route Table (Private-RT)**:
+   - Click **Edit Routes**.
+   - Add a route:
+     - **Destination:** `0.0.0.0/0`
+     - **Target:** **NAT Gateway**
+   - Click **Save changes**.
+
+---
+
+## **6️⃣ Launch EC2 Instances**
+### **Launch a Public Instance**
+1. **Go to EC2** → Click **Launch Instance**.
+2. Select **Amazon Linux 2** or **Ubuntu**.
+3. **Instance Type:** `t2.micro` (free tier).
+4. **Network:** Select `MyVPC`.
+5. **Subnet:** Choose **Public Subnet 1**.
+6. **Enable Auto-Assign Public IP**.
+7. **Security Group:** Allow **SSH (22)** from `0.0.0.0/0` for testing.
+8. **Key Pair:** Create a new key pair (`my-key.pem`).
+9. Click **Launch**.
+
+### **Launch a Private Instance**
+1. **Repeat the above steps**, but:
+   - **Choose Private Subnet 1**.
+   - **DO NOT** enable **Auto-Assign Public IP**.
+   - **Security Group:** Allow **SSH (22) only from the public instance** (e.g., `10.0.0.0/20`).
+   - Click **Launch**.
+
+---
+
+## **7️⃣ Testing the Setup**
+### **Access the Public Instance**
+1. Open **Terminal (Mac/Linux) or Git Bash (Windows)**.
+2. Connect to the public instance:
+   ```sh
+   ssh -i my-key.pem ec2-user@<PUBLIC_IP>
+   ```
+3. Once connected, get the private IP:
+   ```sh
+   ip a
+   ```
+
+### **Access the Private Instance (Using Public Instance as a Bastion)**
+1. **From the Public EC2 Instance**, SSH into the Private EC2:
+   ```sh
+   ssh -i my-key.pem ec2-user@<PRIVATE_IP>
+   ```
+2. You should now be inside the private instance.
 
 
 --- 

@@ -1,9 +1,9 @@
-# **Tutorial: Understanding and Configuring AWS VPC (Virtual Private Cloud)**  
+# **Understanding and Configuring AWS VPC (Virtual Private Cloud)**  
 
 ## **Introduction**  
 AWS **Virtual Private Cloud (VPC)** is a service that allows you to launch **AWS resources in a logically isolated network**. It provides complete control over networking, including **IP addressing, subnets, route tables, and security policies**.  
 
-In this tutorial, you'll learn:  
+You'll learn:  
 ✅ What is AWS VPC?  
 ✅ Key components of a VPC  
 ✅ How to create and configure a VPC in AWS  
@@ -91,14 +91,7 @@ For example:
 
 Formula to calculate hosts per subnet:
 
-2
-(
-32
-−
-subnet bits
-)
-−
-2
+2 ( 32 − subnet bits ) − 2
 
 > (Subtract **2** for **network & broadcast addresses**)
 

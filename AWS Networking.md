@@ -89,7 +89,19 @@ For example:
 | `/24`  | `255.255.255.0` | 254 hosts |
 | `/30`  | `255.255.255.252` | 2 hosts |
 
-> **Formula to Calculate Hosts:** `2^(32 - subnet bits) - 2`  
+Formula to calculate hosts per subnet:
+
+2
+(
+32
+−
+subnet bits
+)
+−
+2
+2 
+(32−subnet bits)
+ −2
 > (Subtract **2** for **network & broadcast addresses**)
 
 ---

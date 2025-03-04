@@ -99,9 +99,7 @@ subnet bits
 )
 −
 2
-2 
-(32−subnet bits)
- −2
+
 > (Subtract **2** for **network & broadcast addresses**)
 
 ---
